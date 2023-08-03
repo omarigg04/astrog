@@ -8,14 +8,14 @@ import {
   Logger,
 } from 'ag-grid-community';
 import { Observable } from 'rxjs';
-import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-astro',
+  templateUrl: './astro.component.html',
+  styleUrls: ['./astro.component.scss']
 })
-export class AppComponent {
+export class AstroComponent {
+  
   // Each Column Definition results in one Column.
   public columnDefs: ColDef[] = [
     { headerName: 'Location', field: 'name', width: 160 },
@@ -133,4 +133,6 @@ export class AppComponent {
   clearSelection(): void {
     this.agGrid.api.deselectAll();
   }
+
+
 }

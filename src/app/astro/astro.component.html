@@ -1,0 +1,23 @@
+<div class="flex card">
+  <div class="m-4 card-container">
+
+
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Search Place</span>
+      <input type="text" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default" [(ngModel)]="searchValue" (keyup.enter)="onSearch()">
+    </div>
+
+
+
+    <!-- AG Grid Angular Component -->
+    <ag-grid-angular style="width: 100%; height: 400px" class="ag-theme-alpine" [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef" [rowData]="rowData$ | async" [rowSelection]="'multiple'" [animateRows]="true"
+      (gridReady)="onGridReady($event)" (cellClicked)="onCellClicked($event)"></ag-grid-angular>
+
+    <!-- Button to clear selection -->
+    <button type="button" class="btn btn-outline-primary mt-4" (click)="clearSelection()">Clear Selection</button>
+
+
+  </div>
+</div>

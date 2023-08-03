@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    // -webkit-overflow-scrolling: touch;
+}
+
+
+.yes-cell {
+    background-color: green; /* Opcional: Estilo para el texto "Yes" */
+  }
+  
+  .no-cell {
+    background-color: red; /* Opcional: Estilo para el texto "No" */
+  }
